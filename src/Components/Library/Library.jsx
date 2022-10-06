@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBookOpen} from '@fortawesome/free-solid-svg-icons'
 import Books from '../Books/Books';
 import './Library.css'
+import Profile from '../StudentsProfile/Profile';
 
 const Library = () => {
     //load data
@@ -13,7 +14,7 @@ const Library = () => {
         .then(data => setBooks(data))
     },[])
     return (
-        <div className='container mx-auto grid grid-cols-5'>
+        <div className='main_section container ml-auto grid grid-cols-5'>
             <div className="libary_info mt-10 col-span-4">
                 <div className="libary_name mb-10">
                    <h1 className='text-2xl font-bold text-primary'><FontAwesomeIcon icon={faBookOpen} />  Engnieering-Libary</h1>
@@ -31,7 +32,7 @@ const Library = () => {
             </div>
             </div>
             <div className="student_section">
-                <h1>Info</h1>
+                <Profile/>
             </div>
         </div>
     );

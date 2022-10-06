@@ -2,3 +2,13 @@
     padding: 0px;
     margin: 0px;
 }
+
+.student_section{
+    background-color: rgb(242, 240, 240);
+    padding: 10px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  
+   
+}

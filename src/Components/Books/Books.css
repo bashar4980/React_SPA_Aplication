@@ -1,4 +1,7 @@
 .card img{
-    height: 30vh;
+    height: 40vh;
    width: 100%;
+}
+.w-80{
+    width: 19rem;
 }
