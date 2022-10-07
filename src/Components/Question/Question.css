@@ -1,0 +1,11 @@
+.question1 h1{
+       font-size: 25px;
+       margin-top: 10px;
+       font-weight: bold;
+}
+.question1 p{
+    font-size: 18px;
+}
+.question1{
+    margin-bottom: 20px;
+}

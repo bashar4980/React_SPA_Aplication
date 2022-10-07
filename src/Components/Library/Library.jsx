@@ -4,6 +4,7 @@ import {faBookOpen} from '@fortawesome/free-solid-svg-icons'
 import Books from '../Books/Books';
 import './Library.css'
 import Profile from '../StudentsProfile/Profile';
+import Question from '../Question/Question';
 
 const Library = () => {
     //load data
@@ -18,7 +19,8 @@ const Library = () => {
         setSubjects([...subjects , book])
     }
     return (
-        <div className='main_section container ml-auto '>
+       <div>
+         <div className='main_section container ml-auto '>
             <div className="libary_info mt-10 ">
                 <div className="libary_name mb-10">
                    <h1 className='text-2xl font-bold text-primary'><FontAwesomeIcon icon={faBookOpen} />  Engnieering-Libary</h1>
@@ -34,11 +36,17 @@ const Library = () => {
                 })
               }
             </div>
+             <div className="question_part mt-10 mr-10">
+            <Question/>
+        </div>
             </div>
             <div className="student_section">
                 <Profile subjects={subjects}/>
             </div>
+            
         </div>
+       
+       </div>
     );
 };
 
