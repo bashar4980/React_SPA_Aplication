@@ -14,8 +14,8 @@ const Library = () => {
         .then(data => setBooks(data))
     },[])
     return (
-        <div className='main_section container ml-auto grid grid-cols-5'>
-            <div className="libary_info mt-10 col-span-4">
+        <div className='main_section container ml-auto grid grid-cols-6'>
+            <div className="libary_info mt-10 col-span-5">
                 <div className="libary_name mb-10">
                    <h1 className='text-2xl font-bold text-primary'><FontAwesomeIcon icon={faBookOpen} />  Engnieering-Libary</h1>
                    <h1 className='text-2xl mt-5'>Read Yours Subject</h1>
@@ -31,7 +31,7 @@ const Library = () => {
               }
             </div>
             </div>
-            <div className="student_section">
+            <div className="student_section ">
                 <Profile/>
             </div>
         </div>
