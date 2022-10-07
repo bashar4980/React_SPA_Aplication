@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getTime, saveData } from "../../utilities/Utilities";
 import "./Profile.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = ({subjects}) => {
   const [breaktime , setBreaktime] = useState(0)
@@ -21,6 +23,9 @@ const Profile = ({subjects}) => {
     setBreaktime(storeBreakTime)
    }
   },[breaktime])
+  const SuccessMessage = () =>{
+    toast.success("Wow You finished your target!");
+  }
  
   return (
     <div>
@@ -74,9 +79,10 @@ const Profile = ({subjects}) => {
             <h1 className="pt-3 ">Break time</h1>
             <p className="pt-3 ">{breaktime} min</p>
           </div>
-          <button className="btn btn-block btn-primary mt-5">Activity Completed</button>
+          <button onClick={SuccessMessage} className="btn btn-block btn-primary mt-5">Activity Completed</button>
         </div>
       </div>
+      <ToastContainer position="top-center" />
     </div>
   );
 };
