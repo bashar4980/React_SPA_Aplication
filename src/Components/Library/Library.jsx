@@ -12,10 +12,14 @@ const Library = () => {
         fetch("data.json")
         .then(res => res.json())
         .then(data => setBooks(data))
-    },[])
+    },[]);
+    const [subjects , setSubjects]=useState([])
+    const getReadingTime = (book)=>{
+        setSubjects([...subjects , book])
+    }
     return (
-        <div className='main_section container ml-auto grid grid-cols-6'>
-            <div className="libary_info mt-10 col-span-5">
+        <div className='main_section container ml-auto '>
+            <div className="libary_info mt-10 ">
                 <div className="libary_name mb-10">
                    <h1 className='text-2xl font-bold text-primary'><FontAwesomeIcon icon={faBookOpen} />  Engnieering-Libary</h1>
                    <h1 className='text-2xl mt-5'>Read Yours Subject</h1>
@@ -25,14 +29,14 @@ const Library = () => {
               {
                 books.map(book =>{
                     return(
-                        <Books book={book} key={book.id}/>
+                        <Books book={book} key={book.id} getReadingTime={getReadingTime}/>
                     )
                 })
               }
             </div>
             </div>
-            <div className="student_section ">
-                <Profile/>
+            <div className="student_section">
+                <Profile subjects={subjects}/>
             </div>
         </div>
     );

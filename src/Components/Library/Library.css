@@ -1,14 +1,20 @@
-.book_section{
+.book_section {
     padding: 0px;
-    margin: 0px;
+    margin : 0px;
+}
+
+.main_section {
+    display              : grid;
+    grid-template-columns: 4fr 1fr;
 }
 
 .student_section{
     background-color: rgb(242, 240, 240);
-    padding: 10px;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-  
-   
+    padding         : 10px;
+    position        : fixed!important;
+    top             : 0;
+    right: 0;
+
+
+
 }

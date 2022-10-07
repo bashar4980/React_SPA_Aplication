@@ -2,10 +2,20 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 10%;
+    margin-top: 0%;
 }
 .user_info{
     display: flex;
     justify-content: space-around;
    
+}
+.reading_time{
+    display: flex;
+    justify-content: space-around;
+
+}
+.break_time{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
