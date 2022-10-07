@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Profile.css";
 
 const Profile = ({subjects}) => {
+  const [breaktime , setBreaktime] = useState(0)
   let totalTime = 0 ;
   for(const subject of subjects){
     totalTime = totalTime + subject.Time 
+  }
+  const breakTime = [10,15,20,25,30,35];
+
+  const getBreakTime= time =>{
+    setBreaktime(time)
   }
   return (
     <div>
@@ -34,12 +40,15 @@ const Profile = ({subjects}) => {
       <div className="break_section ">
         <h1 className="text-xl font-bold mt-2">Add A Break(min)</h1>
         <div className="grid grid-cols-3 gap-2 shadow-inner shadow-indigo-500/40  rounded-sm mt-5 p-4">
-          <button className="btn w-8 btn-outline">10</button>
-          <button className="btn btn-outline w-8">10</button>
-          <button className="btn w-8 btn-outline">10</button>
-          <button className="btn w-8 btn-outline">10</button>
-          <button className="btn w-8 btn-outline">10</button>
-          <button className="btn w-8 btn-outline">25</button>
+      
+          {
+            breakTime.map(time => {
+              return(
+                <button onClick={()=>getBreakTime(time)} className="btn w-8 btn-outline" key={time} >{time}</button>
+              )
+            })
+          }
+          
         </div>
       </div>
       {/* Reading time */}
@@ -53,7 +62,7 @@ const Profile = ({subjects}) => {
           </div>
           <div className="break_time shadow-inner font-bold shadow-indigo-500/40  rounded-sm mt-5 p-1">
             <h1 className="pt-3 ">Break time</h1>
-            <p className="pt-3 ">2h</p>
+            <p className="pt-3 ">{breaktime} min</p>
           </div>
           <button className="btn btn-block btn-primary mt-5">Activity Completed</button>
         </div>
