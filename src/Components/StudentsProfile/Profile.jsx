@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getTime, saveData } from "../../utilities/Utilities";
 import "./Profile.css";
 
 const Profile = ({subjects}) => {
@@ -10,8 +11,17 @@ const Profile = ({subjects}) => {
   const breakTime = [10,15,20,25,30,35];
 
   const getBreakTime= time =>{
-    setBreaktime(time)
+    setBreaktime(time);
+    saveData(time);
+    
   }
+  useEffect(()=>{
+    const storeBreakTime = getTime();
+   if(storeBreakTime){
+    setBreaktime(storeBreakTime)
+   }
+  },[breaktime])
+ 
   return (
     <div>
       <div className="user ">
