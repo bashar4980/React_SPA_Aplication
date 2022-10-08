@@ -11,9 +11,10 @@
 .student_section{
     background-color: rgb(242, 240, 240);
     padding         : 10px;
-    position        : fixed!important;
+    height: 110vh;
+    position        : sticky!important;
     top             : 0;
-    right: 0;
+ 
 
 
 

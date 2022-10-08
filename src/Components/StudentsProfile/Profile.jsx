@@ -40,15 +40,15 @@ const Profile = ({subjects}) => {
       <div className="user_info shadow-inner shadow-indigo-500/40  rounded-sm mt-5  p-4">
         <div className="weight">
           <h1 className="text-lg font-bold">75kg</h1>
-          <p className="font-semibold"> Weight</p>
+          <p  > Weight</p>
         </div>
         <div className="height">
           <h1 className="text-lg font-bold">5.8</h1>
-          <p className="font-semibold">Height</p>
+          <p  >Height</p>
         </div>
         <div className="age">
           <h1 className="text-lg font-bold">24yrs</h1>
-          <p className="font-semibold">Age</p>
+          <p  >Age</p>
         </div>
       </div>
       {/* Add A break time */}

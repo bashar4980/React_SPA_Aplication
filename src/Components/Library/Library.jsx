@@ -20,14 +20,14 @@ const Library = () => {
     }
     return (
        <div>
-         <div className='main_section container ml-auto '>
+         <div className='main_section ml-5'>
             <div className="libary_info mt-10 ">
                 <div className="libary_name mb-10">
-                   <h1 className='text-2xl font-bold text-primary'><FontAwesomeIcon icon={faBookOpen} />  Engnieering-Libary</h1>
-                   <h1 className='text-2xl mt-5'>Read Yours Subject</h1>
+                   <h1 className='text-2xl font-bold text-primary ml-5'><FontAwesomeIcon icon={faBookOpen} />  Engnieering-Libary</h1>
+                   <h1 className='text-2xl mt-5 ml-5'>Read Yours Subject</h1>
                    </div>
       
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid lg:grid-cols-3 gap-6 sm:grid-cols-2 ml-5 mr-5">
               {
                 books.map(book =>{
                     return(
@@ -36,7 +36,7 @@ const Library = () => {
                 })
               }
             </div>
-             <div className="question_part mt-10 mr-10">
+             <div className="question_part mt-10 mr-5">
             <Question/>
         </div>
             </div>
