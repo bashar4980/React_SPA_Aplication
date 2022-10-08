@@ -26,7 +26,7 @@ const Library = () => {
             <h1 className="text-2xl font-bold text-primary ml-5">
               <FontAwesomeIcon icon={faBookOpen} /> Engnieering-Libary
             </h1>
-            <h1 className="text-2xl mt-5 ml-5">Read Yours Subject</h1>
+            <h1 className="text-2xl mt-5 ml-5">Read Your's Subject</h1>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6 sm:grid-cols-2 ml-5 mr-5">
