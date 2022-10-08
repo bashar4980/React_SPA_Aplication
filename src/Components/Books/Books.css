@@ -5,3 +5,8 @@
 .w-80{
     width: 19rem;
 }
+ @media screen and (max-width:639px) {
+    .card img{
+        height: auto;
+    }
+ }

@@ -12,10 +12,20 @@
     background-color: rgb(242, 240, 240);
     padding         : 10px;
     height: 110vh;
-    position        : sticky!important;
+    position        : sticky;
     top             : 0;
  
 
 
 
+}
+
+@media only screen and (max-width: 500px) {
+    .main_section {
+        display              : grid;
+        grid-template-columns: 1fr;
+    }
+  .student_section{
+    position: relative;
+  }
 }

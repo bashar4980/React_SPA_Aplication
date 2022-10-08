@@ -36,13 +36,14 @@ const Library = () => {
                 })
               }
             </div>
-             <div className="question_part mt-10 mr-5">
-            <Question/>
-        </div>
+           
             </div>
             <div className="student_section">
                 <Profile subjects={subjects}/>
             </div>
+            <div className="question_part mt-10 mr-5">
+            <Question/>
+        </div>
             
         </div>
        
