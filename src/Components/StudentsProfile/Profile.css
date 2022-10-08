@@ -10,7 +10,8 @@
    
 }
 .user_info p{
-    font-size: 16px;
+    font-size: 14px;
+    margin-right: 5px;
 }
 .reading_time{
     display: flex;

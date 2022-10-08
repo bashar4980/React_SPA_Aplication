@@ -11,9 +11,11 @@
 .student_section{
     background-color: rgb(242, 240, 240);
     padding         : 10px;
-    height: 110vh;
+    max-height: 110vh!important;
     position        : sticky;
     top             : 0;
+    right: 0;
+    z-index: 999000;
  
 
 
@@ -26,6 +28,12 @@
         grid-template-columns: 1fr;
     }
   .student_section{
-    position: relative;
+   position: relative;
+    
+    z-index: 999000;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding-bottom: 50px!important;
+    
   }
 }
