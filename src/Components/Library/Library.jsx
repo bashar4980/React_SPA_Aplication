@@ -9,12 +9,13 @@ import Question from "../Question/Question";
 const Library = () => {
   //load data
   const [books, setBooks] = useState([]);
+  const [subjects, setSubjects] = useState([]);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);
-  const [subjects, setSubjects] = useState([]);
+ 
   const getReadingTime = (book) => {
     setSubjects([...subjects, book]);
   };
